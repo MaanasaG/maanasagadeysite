@@ -1,0 +1,111 @@
+### The problem
+
+## Why your dashboard is lying to you
+
+A developer spends three days thinking, then writes 50 lines that eliminate a system bottleneck.
+
+Another ships 500 lines of plumbing code daily.
+
+Every dashboard crowns the second one more productive. Every experienced engineer knows the first one did the harder work.
+
+---
+
+AI has made this worse. Agents can inflate code volume, PR frequency, test coverage. The metrics that were always incomplete are now actively misleading.
+
+### The trap
+
+## Why token usage kills real measurement
+
+Companies track token consumption because it&rsquo;s easy to pull from APIs. But here&rsquo;s the problem:
+
+*Token usage is an input metric dressed as an output metric.* It tells you how much was consumed, not created.
+
+A developer burning 2M tokens in hallucination loops scores higher than one who wrote a clean 20-line prompt that shipped a feature. Worse — it rewards verbose, inefficient patterns and punishes the precision that signals genuine expertise.
+
+> &ldquo;The most important metric is not how much code AI writes. It&rsquo;s how much engineering velocity has increased as a company.&rdquo;
+>
+> <cite>— Sundar Pichai</cite>
+
+Bottom line: track tokens for cost. Never for performance reviews.
+
+### The shift
+
+## When agents write code, judgment becomes the work
+
+A developer architects a system, writes the prompts, supervises an agent, reviews its output, and ships the feature. They did everything important — just not the typing.
+
+Their skill shows up in three places: can they *debug* what the agent wrote, can they *explain* what the agent wrote, and can they *articulate the tradeoffs* the agent made.
+
+Everything you should measure flows from those three questions.
+
+> &ldquo;If an agent can generate 1,000 lines of code in ten seconds, lines of code are no longer a meaningful metric. More code often means more bugs.&rdquo;
+>
+> <cite>— Fortune, &ldquo;The Supervisor Class&rdquo; (March 2026)</cite>
+
+A small joke that has gotten too true to be funny:
+
+> A PM asks: &ldquo;How productive was the team this sprint?&rdquo;
+>
+> The EM checks the dashboard: &ldquo;The agent wrote 40,000 lines.&rdquo;
+>
+> PM: &ldquo;Great. And the humans?&rdquo;
+>
+> EM: &ldquo;They deleted 38,000 of them.&rdquo;
+
+### The toolkit
+
+## Seven measurable signals — pick what fits your team
+
+Each metric has a unit, a source, and a cadence. Don&rsquo;t track all seven. Pick three or four that match your context.
+
+They cluster around three themes — debugging AI code, explaining AI code, and articulating tradeoffs in AI code.
+
+### Debugging AI code
+
+<ol className="metric-list">
+  <li>
+    <strong>Time-to-resolution on AI-generated bugs.</strong> When AI code breaks in production or QA, how long does the developer take to find and fix it? Measures whether they actually understand what was generated, or just shipped it blind.
+  </li>
+  <li>
+    <strong>Hallucination catch rate in code review.</strong> When reviewing AI-generated PRs (theirs or others&rsquo;), how often does the developer catch invented APIs, fake imports, or non-existent functions before merge? Track count per quarter.
+  </li>
+</ol>
+
+### Explainability
+
+<ol className="metric-list" start={3}>
+  <li>
+    <strong>Code explanation depth (1–3 score).</strong> In 1:1s or design reviews, ask the developer to walk through AI-generated code in their own words. 1 = describes what it does; 2 = explains why this approach; 3 = explains the alternatives that were rejected and why.
+  </li>
+  <li>
+    <strong>Code review comment depth (1–3 score).</strong> Score every review comment they leave: 1 = surface (style, naming); 2 = structural (logic, design); 3 = systemic (architecture, security, scaling). Average score per quarter is your readout.
+  </li>
+</ol>
+
+### Articulating tradeoffs
+
+<ol className="metric-list" start={5}>
+  <li>
+    <strong>Architecture decision records authored.</strong> Count of written design docs that name the chosen approach, the rejected alternatives, and the explicit tradeoffs. Read them. Discuss them in 1:1s. No ADRs = executing. ADRs = designing.
+  </li>
+  <li>
+    <strong>Prompt iteration count per shipped feature.</strong> How many back-and-forth iterations before the agent produced acceptable output? Lower = clearer thinking, sharper specification, better problem decomposition. Pull from agent session logs.
+  </li>
+  <li>
+    <strong>Rework rate on AI-generated code.</strong> Percentage of AI-generated lines that get refactored or rewritten within 30 days of merge. High rework = poor supervision or weak tradeoff awareness at submission time.
+  </li>
+</ol>
+
+> *Productivity isn&rsquo;t what you produce — it&rsquo;s the ratio of value created to effort consumed.*
+
+### One last thing
+
+## Pick your stack and start
+
+Don&rsquo;t track all seven. Pick three or four that match your team&rsquo;s context.
+
+If you only pick three, my vote: time-to-resolution on AI bugs, code review depth score, and rework rate on AI code. Those three together tell you whether someone genuinely understands what they&rsquo;re shipping — or whether they&rsquo;re just an agent&rsquo;s secretary.
+
+Stop measuring PR count. Stop measuring token usage. Stop measuring lines of code.
+
+Measure outcomes instead. Your engineers will thank you. Your software will be better. Your career conversations will actually mean something.

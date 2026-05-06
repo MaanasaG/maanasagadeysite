@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+.DS_Store
+.env*
+!.env.example
+
+# Build / scratch artifacts
+.tmp_pngs
+.verify
+*.tsbuildinfo
+next-env.d.ts
+
+# Local tooling — not part of the project
+.claude
+
