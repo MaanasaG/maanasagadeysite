@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react'
 
 const sections = [
-  { id: 'about', label: 'About' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'work', label: 'Work' },
-  { id: 'leadership', label: 'Leadership' },
-  { id: 'writing', label: 'Writing' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'about', label: 'About-ish' },
+  { id: 'experience', label: 'Where the time went' },
+  { id: 'work', label: 'The greatest hits' },
+  { id: 'leadership', label: 'How I run a team' },
+  { id: 'out-of-my-system', label: 'Out of my system' },
+  { id: 'contact', label: 'Say hi' },
 ]
 
 export function SectionIndex() {
@@ -51,14 +51,14 @@ export function SectionIndex() {
                 href={`#${s.id}`}
                 className={`block font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-200 ${
                   isActive
-                    ? 'text-sageDark'
-                    : 'text-muted/55 hover:text-ink'
+                    ? 'text-ink font-medium'
+                    : 'text-muted hover:text-ink'
                 }`}
               >
                 <span
                   aria-hidden="true"
                   className={`inline-block align-middle mr-2 h-px transition-all duration-200 ${
-                    isActive ? 'w-5 bg-sageDark' : 'w-2 bg-muted/40'
+                    isActive ? 'w-5 bg-ink' : 'w-3 bg-muted/60'
                   }`}
                 />
                 {s.label}

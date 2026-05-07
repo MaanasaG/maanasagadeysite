@@ -4,20 +4,42 @@ export function Hero() {
       id="top"
       className="pt-28 sm:pt-36 lg:pt-44 pb-28 sm:pb-36"
     >
-      <h1 className="hero-title">Maanasa Gadey</h1>
+      <div className="flex flex-col sm:flex-row sm:items-start sm:gap-10">
+        <div className="portrait-wrap" aria-hidden="false">
+          <img
+            src="/photos/portrait.png"
+            alt="Maanasa Gadey"
+            className="portrait-img"
+          />
+        </div>
 
-      <p className="lead mt-9 max-w-[34rem]">
-        Software Engineering Manager at Workday — Workday Student platform &amp;
-        the team I built to bring machine learning into it.
+        <div>
+          <h1 className="hero-title">Maanasa Gadey</h1>
+
+          <p className="lead mt-6 max-w-[34rem]">
+            Sr. Engineering Manager at Workday — leading the ML team for Workday
+            Student and the Financial Aid platform.
+          </p>
+
+          <p className="mt-3 text-[1.0625rem] text-muted">
+            San Carlos, California.
+          </p>
+        </div>
+      </div>
+
+      <p className="mt-10 max-w-[34rem] text-[1.0625rem] leading-[1.7] text-ink">
+        Engineering leader. Mother of two. Compulsive gardener. I spend my days
+        building teams that ship hard things — and figuring out the human stuff
+        that makes that possible. I solve problems in code, in org design, in
+        soil, and occasionally in feelings.
       </p>
 
-      <p className="mt-3 text-[1.0625rem] text-muted">
-        San Carlos, California.
-      </p>
-
-      <p className="mt-9 max-w-[36rem] text-[1.0625rem] leading-[1.7] text-ink">
-        I write about quality as architecture, building ML teams that ship, and
-        why most engineering problems are environment problems.
+      <p className="mt-4 max-w-[34rem] text-[1.0rem] leading-[1.7] text-muted">
+        I&rsquo;m not a writer. I just have thoughts that won&rsquo;t leave me
+        alone, so I put them somewhere.{' '}
+        <a href="#out-of-my-system" className="underline underline-offset-4 text-ink">
+          That somewhere is here →
+        </a>
       </p>
     </section>
   )

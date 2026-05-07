@@ -15,7 +15,7 @@ const projects: Project[] = [
     stat: '3',
     statLabel: 'ML features in year one',
     body:
-      'No team, no infra, no priors. Hired the team. Designed a model-experimentation framework, data validation pipelines, and a cross-functional ML review process. The hard part wasn&rsquo;t the models — it was negotiating where ML belonged inside an existing product and earning trust before we shipped.',
+      'Started from zero: no team, no infra, no priors. Hired and coached the core group, set the operating system (experimentation framework, data validation, review gates), and partnered across Product/Eng/Legal on where ML belongs inside a regulated product. The win wasn&rsquo;t the models; it was trust, velocity, and a repeatable way to ship safely.',
   },
   {
     title: 'Org Chart & Enterprise Frameworks',
@@ -23,7 +23,7 @@ const projects: Project[] = [
     stat: '20%+',
     statLabel: 'lift in product quality',
     body:
-      'Led the team behind frameworks composed across Workday products. Org Chart was the visible one. The unglamorous work was setting up data-driven OKRs that lifted quality and let us measure developer productivity without resorting to lines-of-code theater.',
+      'Led a platform team building frameworks consumed across multiple Workday products. Org Chart was the visible surface; the leadership work was the system underneath: shared standards, adoption plans, and data-driven OKRs that raised quality without performance theater. Built alignment first, then shipped durable leverage.',
   },
   {
     title: 'Road to Zero Regressions',
@@ -31,15 +31,15 @@ const projects: Project[] = [
     stat: '0',
     statLabel: 'regressions on a flagship release',
     body:
-      'A platform-wide push to make quality a property of the architecture, not an output of QA. Reusable automation. Regression heatmaps. Pre-release gates. Quality ownership in the design phase. The point wasn&rsquo;t the tooling; it was shifting where the team thought bugs come from.',
+      'Drove a platform-wide shift: make quality a property of architecture, not an output of QA. Built reusable automation, regression heatmaps, and pre-release gates, but the durable change was cultural: design reviews that assumed failure modes up front and teams that owned quality as a first-class product requirement.',
   },
   {
     title: 'ML Summit',
     tag: 'Workday · 2024',
-    stat: '600',
-    statLabel: 'engineers, two days',
+    stat: '2',
+    statLabel: 'days, one shared vocabulary',
     body:
-      'Led, organized, and spoke at an internal ML summit. Speaker line-up to closing remarks. The goal wasn&rsquo;t information transfer; it was aligning hundreds of people on a shared vocabulary for applied ML inside the product. The features that shipped after were the real metric.',
+      'Orchestrated an internal ML summit end-to-end — program, speakers, narrative, exec alignment. It wasn&rsquo;t a conference; it was an operating mechanism: get engineers across the org aligned on a shared vocabulary, risk posture, and the product and engineering decisions that actually matter before the chaos of scaling ML inside the product.',
   },
   {
     title: 'Dublin enablement',
@@ -47,14 +47,14 @@ const projects: Project[] = [
     stat: '1mo',
     statLabel: 'embedded with a new geo team',
     body:
-      'A month in Dublin training a newly formed team on Workday&rsquo;s automation tools. Curriculum, live architecture sessions, 1:1 mentoring across cultural and time-zone gaps. The lasting outcome was a cross-geo collaboration pattern — and engineers who stayed in touch long after I left.',
+      'Embedded in Dublin to unblock a newly formed geo team: built the onboarding curriculum, ran live architecture sessions, and mentored engineers 1:1. The outcome wasn&rsquo;t a training deck; it was a collaboration pattern that reduced dependency thrash and helped the new team ship independently.',
   },
 ]
 
 export function Projects() {
   return (
     <section id="work" className="py-24 sm:py-32">
-      <SectionLabel>What I&rsquo;ve shipped</SectionLabel>
+      <SectionLabel>The greatest hits</SectionLabel>
 
       <h2 className="section-h2">Five things worth talking about.</h2>
 

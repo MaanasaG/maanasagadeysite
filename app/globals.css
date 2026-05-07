@@ -9,6 +9,9 @@
   --muted: #5E6E5C;
   --sage: #6E8A6E;
   --sage-dark: #3F5A3F;
+  /* Warm accent to keep the page from feeling "product-doc" sterile. */
+  --clay: #A96343;
+  --clay-dark: #7F452E;
 }
 
 html, body {
@@ -23,6 +26,29 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 19px;
   line-height: 1.75;
+  position: relative;
+}
+
+/* Subtle paper/grain texture (CSS-only, no assets). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.065;
+  background-image:
+    radial-gradient(circle at 18% 14%, rgba(169, 99, 67, 0.26), transparent 52%),
+    radial-gradient(circle at 88% 74%, rgba(63, 90, 63, 0.22), transparent 58%),
+    repeating-linear-gradient(0deg, rgba(30, 45, 28, 0.06) 0px, rgba(30, 45, 28, 0.06) 1px, transparent 1px, transparent 6px),
+    repeating-linear-gradient(90deg, rgba(30, 45, 28, 0.04) 0px, rgba(30, 45, 28, 0.04) 1px, transparent 1px, transparent 10px);
+  mix-blend-mode: multiply;
+}
+
+/* Ensure content sits above the texture overlay */
+#__next, main, header, footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* ---- Typography scale ----------------------------------------------- */
@@ -135,8 +161,8 @@ a {
   transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 a:hover {
-  color: var(--sage-dark);
-  text-decoration-color: var(--sage-dark);
+  color: var(--clay-dark);
+  text-decoration-color: var(--clay-dark);
 }
 
 /* Plant canvas — frames are pre-keyed transparent. Opacity is controlled
@@ -241,11 +267,82 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+/* ---- Portrait (Hero) — CSS duotone so it feels illustrated, not LinkedIn --- */
+.portrait-wrap {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--sage-dark);
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 0 2px var(--sage);
+}
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* grayscale first, then luminosity blend against sage-dark background
+     creates a two-tone illustrated effect — not raw photo */
+  filter: grayscale(1) contrast(1.25) brightness(1.08);
+  mix-blend-mode: luminosity;
+  opacity: 0.88;
+  display: block;
+}
+@media (min-width: 640px) {
+  .portrait-wrap { width: 136px; height: 136px; margin-bottom: 0; }
+}
+
+/* ---- Garden photos (About section) ---------------------------------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 36rem;
+}
+@media (max-width: 480px) {
+  .photo-grid { grid-template-columns: 1fr; }
+}
+.photo-figure {
+  margin: 0;
+}
+.photo-figure--wide {
+  max-width: 36rem;
+}
+.photo-aside {
+  max-width: 36rem;
+}
+.photo-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  filter: saturate(0.92) brightness(1.02);
+  transition: filter 200ms ease;
+}
+.photo-figure--wide .photo-img {
+  aspect-ratio: 4 / 3;
+}
+.photo-img:hover {
+  filter: saturate(1) brightness(1.04);
+}
+.photo-caption {
+  margin-top: 0.6rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10.5px;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  font-style: italic;
+}
+
 /* Subtle visual rule for divider (literary feel) */
 .rule {
   display: block;
   width: 2.5rem;
   height: 1px;
-  background: var(--sage);
+  background: linear-gradient(90deg, var(--sage) 0%, rgba(110, 138, 110, 0.35) 70%, transparent 100%);
   opacity: 0.55;
 }
