@@ -1,4 +1,5 @@
 import { PlantCanvas } from '@/components/PlantCanvas'
+import { SectionIndex } from '@/components/SectionIndex'
 import { Hero } from '@/components/sections/Hero'
 import { About } from '@/components/sections/About'
 import { Experience } from '@/components/sections/Experience'
@@ -49,10 +50,13 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Section index — sticky left gutter on lg+ screens, gives the
+          reader orientation without a top nav. */}
+      <SectionIndex />
+
       {/* Content column — centered in the viewport so the text reads as the
-          page's substantial body, not a side strip. The plant sits in the
-          right rail at low opacity, so any overlap on wide viewports
-          disappears into the page bg. */}
+          page's substantial body. The plant sits in the right rail at low
+          opacity, so any overlap on wide viewports disappears into the bg. */}
       <div className="relative z-10 mx-auto w-full">
         <div className="mx-auto w-full px-6 sm:px-10 lg:px-12">
           <div className="mx-auto max-w-prose">

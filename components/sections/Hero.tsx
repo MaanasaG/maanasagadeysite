@@ -2,17 +2,22 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative pt-24 sm:pt-32 lg:pt-40 pb-24 sm:pb-32"
+      className="pt-28 sm:pt-36 lg:pt-44 pb-28 sm:pb-36"
     >
-      <h1 className="font-serif text-[2.6rem] sm:text-[3.25rem] lg:text-[3.5rem] leading-[1.05] tracking-[-0.01em] text-ink">
-        Maanasa Gadey
-      </h1>
-      <p className="mt-7 text-[1.0625rem] leading-[1.7] text-ink max-w-[34rem]">
+      <h1 className="hero-title">Maanasa Gadey</h1>
+
+      <p className="lead mt-9 max-w-[34rem]">
         Software Engineering Manager at Workday — Workday Student platform &amp;
         the team I built to bring machine learning into it.
       </p>
-      <p className="mt-2 text-[1.0625rem] leading-[1.7] text-muted">
+
+      <p className="mt-3 text-[1.0625rem] text-muted">
         San Carlos, California.
+      </p>
+
+      <p className="mt-9 max-w-[36rem] text-[1.0625rem] leading-[1.7] text-ink">
+        I write about quality as architecture, building ML teams that ship, and
+        why most engineering problems are environment problems.
       </p>
     </section>
   )

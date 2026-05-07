@@ -4,7 +4,7 @@ import { posts } from '@/lib/posts'
 export function Writing() {
   return (
     <section id="writing" className="py-24 sm:py-32">
-      <SectionLabel>Writing</SectionLabel>
+      <SectionLabel>Recent writing</SectionLabel>
 
       {posts.map((post) => (
         <article key={post.slug} className="mt-2">
