@@ -23,7 +23,7 @@ const config: Config = {
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
       maxWidth: {
-        prose: '40rem',
+        prose: '44rem',
       },
     },
   },

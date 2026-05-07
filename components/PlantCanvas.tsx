@@ -132,10 +132,29 @@ export function PlantCanvas() {
     }
 
     if (mode === 'static') {
+      // Static (mobile / reduced-motion): hold a single mid-growth frame at
+      // a fixed gentle opacity. No scroll narrative on small screens.
       draw(0)
+      if (canvasRef.current) canvasRef.current.style.opacity = '0.30'
       const onResize = () => draw(0)
       window.addEventListener('resize', onResize)
       return () => window.removeEventListener('resize', onResize)
+    }
+
+    // Opacity ramp tied to scroll progress.
+    //   0%  →  8%   : 0 (hero is text-only — exec read)
+    //   8%  → 28%   : eased rise to PEAK
+    //  28%  → 100%  : hold near PEAK with a small lift through Contact
+    // PEAK is high enough to read clearly as a plant; the filter
+    // (saturate 0.7, brightness 1.05) keeps it from competing with text.
+    const PEAK = 0.5
+    const opacityFor = (p: number) => {
+      if (p < 0.08) return 0
+      if (p < 0.28) {
+        const t = (p - 0.08) / 0.2
+        return PEAK * (1 - Math.pow(1 - t, 3)) // ease-out cubic
+      }
+      return Math.min(0.58, PEAK + (p - 0.28) * 0.11)
     }
 
     const onScroll = () => {
@@ -152,6 +171,9 @@ export function PlantCanvas() {
         if (idx !== lastFrameRef.current) {
           lastFrameRef.current = idx
           draw(idx)
+        }
+        if (canvasRef.current) {
+          canvasRef.current.style.opacity = String(opacityFor(progress))
         }
       })
     }
@@ -181,9 +203,7 @@ export function PlantCanvas() {
     >
       <canvas
         ref={canvasRef}
-        className={`plant-canvas block h-full w-full transition-opacity duration-700 ${
-          ready ? 'opacity-100' : 'opacity-0'
-        }`}
+        className="plant-canvas block h-full w-full"
       />
     </div>
   )

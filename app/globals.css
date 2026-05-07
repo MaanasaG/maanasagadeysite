@@ -21,6 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 ::selection {
@@ -46,11 +48,15 @@ a:hover {
   text-decoration-color: var(--sage-dark);
 }
 
-/* Plant canvas — frames are pre-keyed with transparent backgrounds, so the
- * page bg shows through naturally. A subtle saturation boost deepens the
- * plant tones on the slightly greener page. */
+/* Plant canvas — frames are pre-keyed transparent. Opacity is controlled
+ * dynamically by PlantCanvas.tsx so the plant fades in with scroll: 0 in
+ * the hero, easing in by About, holding present-but-quiet through Contact.
+ * The filter keeps recognizable plant character — leaves still read as
+ * leaves — while pulling the saturation enough to never compete with text. */
 .plant-canvas {
-  filter: saturate(1.06);
+  opacity: 0;
+  filter: brightness(1.05) saturate(0.7);
+  transition: opacity 80ms linear;
 }
 
 /* Hide the plant on print */

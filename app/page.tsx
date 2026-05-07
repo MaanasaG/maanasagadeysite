@@ -26,34 +26,36 @@ export default function Page() {
         style={{ zIndex: 0 }}
       >
         <div className="h-full w-full">
-          {/* Plant area — bigger, more central. The container spans roughly
-              the right two-thirds of the viewport with object-fit: cover, so
-              the plant lands centered ~65% from the left. */}
-          <div className="absolute right-0 top-0 h-full w-[clamp(40rem,68vw,60rem)]">
+          {/* Plant — narrow right rail. Opacity is animated by PlantCanvas
+              based on scroll progress: invisible in the hero, easing in as
+              the visitor reads About / Experience, present-but-quiet by
+              Contact. The container is sized to match a quiet companion. */}
+          <div className="absolute right-0 top-0 h-full w-[clamp(18rem,24vw,24rem)]">
             <PlantCanvas />
           </div>
         </div>
       </div>
 
-      {/* Mobile: same PlantCanvas — it auto-detects mobile and renders a
-          static frame 60 with the same in-canvas blend pipeline. */}
+      {/* Mobile: PlantCanvas tucked into the bottom-right corner. Smaller
+          and even quieter than desktop — at 390px wide, even a faint plant
+          can compete with the text. */}
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-0 md:hidden"
         style={{ zIndex: 0 }}
       >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="h-[80vh] w-full">
-            <PlantCanvas />
-          </div>
+        <div className="absolute right-[-12vw] bottom-0 h-[42vh] w-[55vw]">
+          <PlantCanvas />
         </div>
       </div>
 
-      {/* Content column — text-forward, sits on the left of the page so the
-          plant has room to breathe to its right. Max-width prose for legibility. */}
+      {/* Content column — centered in the viewport so the text reads as the
+          page's substantial body, not a side strip. The plant sits in the
+          right rail at low opacity, so any overlap on wide viewports
+          disappears into the page bg. */}
       <div className="relative z-10 mx-auto w-full">
-        <div className="mx-auto w-full max-w-[78rem] px-6 sm:px-10 lg:px-16">
-          <div className="max-w-prose md:pl-2 lg:pl-4">
+        <div className="mx-auto w-full px-6 sm:px-10 lg:px-12">
+          <div className="mx-auto max-w-prose">
             <Hero />
             <About />
             <Experience />
