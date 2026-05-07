@@ -85,10 +85,25 @@ export function About() {
       </div>
 
       <p className="mt-8 max-w-[36rem] leading-[1.75]">
-        Active in Women at Workday. Mentor across teams. Mother of two —
-        those seedlings below are named after them — which has done more to
-        refine my management style than any leadership program I&rsquo;ve
-        attended.{' '}
+        Active in Women at Workday. Mentor across teams. I judge hackathons
+        when I can — partly because I enjoy watching people build under
+        pressure, mostly because it&rsquo;s the best way to see how someone
+        thinks when the stakes are low and the energy is high.{' '}
+        <em className="not-italic text-muted">
+          Spoiler: the ones who ask the most questions usually win.
+        </em>
+      </p>
+
+      <p className="mt-5 max-w-[36rem] leading-[1.75]">
+        Some weekends I cook for people experiencing homelessness in the area.
+        It started as something small.{' '}
+        <em className="not-italic text-muted">It stayed that way on purpose.</em>
+      </p>
+
+      <p className="mt-5 max-w-[36rem] leading-[1.75]">
+        Mother of two — those seedlings below are named after them — which has
+        done more to refine my management style than any leadership program
+        I&rsquo;ve attended.{' '}
         <em className="not-italic text-muted">
           A toddler will give you feedback no 360 survey ever will.
         </em>
