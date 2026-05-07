@@ -95,12 +95,6 @@ export function About() {
       </p>
 
       <p className="mt-5 max-w-[36rem] leading-[1.75]">
-        Some weekends I cook for people experiencing homelessness in the area.
-        It started as something small.{' '}
-        <em className="not-italic text-muted">It stayed that way on purpose.</em>
-      </p>
-
-      <p className="mt-5 max-w-[36rem] leading-[1.75]">
         Mother of two — those seedlings below are named after them — which has
         done more to refine my management style than any leadership program
         I&rsquo;ve attended.{' '}
