@@ -142,19 +142,17 @@ export function PlantCanvas() {
     }
 
     // Opacity ramp tied to scroll progress.
-    //   0%  →  8%   : 0 (hero is text-only — exec read)
-    //   8%  → 28%   : eased rise to PEAK
-    //  28%  → 100%  : hold near PEAK with a small lift through Contact
-    // PEAK is high enough to read clearly as a plant; the filter
-    // (saturate 0.7, brightness 1.05) keeps it from competing with text.
-    const PEAK = 0.5
+    //   0%        : START (visible from the very top)
+    //   0% → 30%  : eased rise from START to PEAK
+    //  30% → 100% : hold near PEAK with a small lift through Contact
+    const START = 0.22
+    const PEAK = 0.52
     const opacityFor = (p: number) => {
-      if (p < 0.08) return 0
-      if (p < 0.28) {
-        const t = (p - 0.08) / 0.2
-        return PEAK * (1 - Math.pow(1 - t, 3)) // ease-out cubic
+      if (p < 0.30) {
+        const t = p / 0.30
+        return START + (PEAK - START) * (1 - Math.pow(1 - t, 3)) // ease-out cubic
       }
-      return Math.min(0.58, PEAK + (p - 0.28) * 0.11)
+      return Math.min(0.60, PEAK + (p - 0.30) * 0.11)
     }
 
     const onScroll = () => {
