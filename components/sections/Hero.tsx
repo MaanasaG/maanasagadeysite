@@ -24,6 +24,25 @@ export function Hero() {
           <p className="mt-3 text-[1.0625rem] text-muted">
             San Carlos, California.
           </p>
+
+          <p className="mt-3 flex gap-4 font-mono text-[11px] uppercase tracking-[0.14em]">
+            <a
+              href="https://www.linkedin.com/in/maanasagadey/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-ink transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/MaanasaG"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-ink transition-colors"
+            >
+              GitHub
+            </a>
+          </p>
         </div>
       </div>
 
@@ -34,7 +53,7 @@ export function Hero() {
         soil, and occasionally in feelings.
       </p>
 
-      <p className="mt-4 max-w-[34rem] text-[1.0rem] leading-[1.7] text-muted">
+      <p className="mt-4 max-w-[34rem] text-[1.0rem] leading-[1.7]">
         I&rsquo;m not a writer. I just have thoughts that won&rsquo;t leave me
         alone, so I put them somewhere.{' '}
         <a href="#out-of-my-system" className="underline underline-offset-4 text-ink">

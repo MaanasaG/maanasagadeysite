@@ -12,7 +12,7 @@ const config: Config = {
       colors: {
         page: '#F2F4EF',
         ink: '#1E2D1C',
-        muted: '#5E6E5C',
+        muted: '#4A5A48',
         sage: '#6E8A6E',
         sageDark: '#3F5A3F',
         hairline: '#D8DDD4',

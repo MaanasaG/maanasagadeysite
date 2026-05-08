@@ -19,22 +19,26 @@ export function Contact() {
           >
             LinkedIn
           </a>
+          {' '}and{' '}
+          <a
+            href="https://github.com/MaanasaG"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
           .
         </p>
-        <p className="text-muted">
+        <p>
           I&rsquo;m not actively job-hunting, but I read every email and reply
           to most. If you&rsquo;re a student or early-career engineer, my reply
           rate is even higher.
         </p>
-        <p className="text-muted">
-          Happy to talk engineering leadership, Workday, AI in enterprise,
-          growing things in the Bay Area{' '}
-          <em className="not-italic">(plants or teams — genuinely the same skill set)</em>,
-          or parenting. On parenting: I have two small humans and approximately
-          zero answers, but I will absolutely listen, commiserate, and pretend
-          I know what I&rsquo;m doing.{' '}
-          <em className="not-italic">Especially gardening.</em>{' '}
-          I have strong opinions about soil and I&rsquo;m not even slightly sorry.
+        <p>
+          Happy to talk engineering leadership, AI in enterprise, growing
+          things in the Bay Area{' '}
+          <em className="not-italic">(plants or teams)</em>, or
+          parenting with zero answers and full honesty.
         </p>
       </div>
     </section>

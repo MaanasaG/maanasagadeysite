@@ -87,7 +87,7 @@ export function Experience() {
               <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
                 {r.org}
               </p>
-              <p className="mt-2 text-[0.9rem] leading-[1.65] text-muted">
+              <p className="mt-2 text-[0.9rem] leading-[1.65]">
                 {r.note}
               </p>
             </div>
