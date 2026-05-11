@@ -25,7 +25,7 @@ const mono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://maanasagadey.org'),
+  metadataBase: new URL('https://maanasagadey.com'),
   title: {
     default: 'Maanasa Gadey',
     template: '%s — Maanasa Gadey',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: 'Maanasa Gadey',
     description:
       'Software Engineering Manager at Workday. Building resilient platforms, ML teams, and the people that ship them.',
-    url: 'https://maanasagadey.org',
+    url: 'https://maanasagadey.com',
     siteName: 'Maanasa Gadey',
     type: 'website',
   },
