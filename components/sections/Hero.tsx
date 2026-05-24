@@ -17,8 +17,7 @@ export function Hero() {
           <h1 className="hero-title">Maanasa Gadey</h1>
 
           <p className="lead mt-6 max-w-[34rem]">
-            Sr. Engineering Manager at Workday — leading the ML team for Workday
-            Student and the Financial Aid platform.
+            I run teams. I help run teams. Two kids and a garden run me.
           </p>
 
           <p className="mt-3 text-[1.0625rem] text-muted">
