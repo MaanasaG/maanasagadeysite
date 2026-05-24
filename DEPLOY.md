@@ -50,3 +50,13 @@ GitHub Pages caches HTML for ~10 minutes at the edge; a hard refresh usually fix
 ## Manual redeploy (no code change)
 
 GitHub → **Actions** → **Deploy to GitHub Pages** → **Run workflow** → branch `main`.
+
+## CI note
+
+Every `npm run build` (including GitHub Actions) verifies the export: hero copy, writing section, and all post pages.
+
+To enable PR checks before merge, push the updated `.github/workflows/deploy.yml` from your machine after:
+
+```bash
+gh auth refresh -h github.com -s workflow
+```
