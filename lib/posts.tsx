@@ -1,3 +1,4 @@
+// New post? Add MDX in content/posts/, then register here (newest first).
 import ReadingPost from '@/content/posts/reading-is-the-new-coding.mdx'
 import MeasuringPost from '@/content/posts/measuring-developer-productivity.mdx'
 import HiringPost from '@/content/posts/hiring-for-editorial-judgment.mdx'

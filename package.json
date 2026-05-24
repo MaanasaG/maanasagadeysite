@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check": "bash scripts/verify-build.sh",
+    "preview": "npm run build && npx --yes serve@14 out -l 4173",
     "frames": "bash scripts/extract-frames.sh"
   },
   "dependencies": {

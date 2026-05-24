@@ -13,4 +13,9 @@ next-env.d.ts
 
 # Local tooling — not part of the project
 .claude
+.vercel
+
+# Draft / scratch (not deployed)
+Maanasa .md
+measuring-developer-productivity.html
 
