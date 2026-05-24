@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     template: '%s — Maanasa Gadey',
   },
   description:
-    'Software Engineering Manager at Workday. Building resilient platforms, ML teams, and the people that ship them.',
+    'I run teams. I help run teams. Engineering leader, mother of two, compulsive gardener.',
   authors: [{ name: 'Maanasa Gadey' }],
   openGraph: {
     title: 'Maanasa Gadey',
     description:
-      'Software Engineering Manager at Workday. Building resilient platforms, ML teams, and the people that ship them.',
+      'I run teams. I help run teams. Engineering leader, mother of two, compulsive gardener.',
     url: 'https://maanasagadey.com',
     siteName: 'Maanasa Gadey',
     type: 'website',
