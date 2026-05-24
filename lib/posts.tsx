@@ -1,3 +1,4 @@
+import ReadingPost from '@/content/posts/reading-is-the-new-coding.mdx'
 import MeasuringPost from '@/content/posts/measuring-developer-productivity.mdx'
 import HiringPost from '@/content/posts/hiring-for-editorial-judgment.mdx'
 
@@ -11,6 +12,14 @@ export type Post = {
 }
 
 export const posts: Post[] = [
+  {
+    slug: 'reading-is-the-new-coding',
+    title: 'Reading Is the New Coding',
+    dek: "AI 10x'd what there is to read. Your eyeballs did not get a 10x. Congratulations, you're the bottleneck now.",
+    date: '2026-05-24',
+    dateLabel: 'May 2026',
+    Component: ReadingPost as Post['Component'],
+  },
   {
     slug: 'hiring-for-editorial-judgment',
     title: "You're not hiring a developer. You're hiring an editor.",
