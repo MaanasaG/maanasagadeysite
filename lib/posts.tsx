@@ -1,4 +1,5 @@
 // New post? Add MDX in content/posts/, then register here (newest first).
+import SpanPost from '@/content/posts/span-of-judgment.mdx'
 import CoachingPost from '@/content/posts/coaching-the-coach.mdx'
 import ReadingPost from '@/content/posts/reading-is-the-new-coding.mdx'
 import MeasuringPost from '@/content/posts/measuring-developer-productivity.mdx'
@@ -14,6 +15,14 @@ export type Post = {
 }
 
 export const posts: Post[] = [
+  {
+    slug: 'span-of-judgment',
+    title: 'Span of Control Is Dead',
+    dek: 'A manager used to oversee ~7 people. How many humans-supervising-agents can one manager oversee before judgment quality collapses?',
+    date: '2026-07-01',
+    dateLabel: 'July 2026',
+    Component: SpanPost as Post['Component'],
+  },
   {
     slug: 'coaching-the-coach',
     title: 'Coaching the Coach',
