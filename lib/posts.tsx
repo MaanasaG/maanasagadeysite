@@ -1,4 +1,5 @@
 // New post? Add MDX in content/posts/, then register here (newest first).
+import CoachingPost from '@/content/posts/coaching-the-coach.mdx'
 import ReadingPost from '@/content/posts/reading-is-the-new-coding.mdx'
 import MeasuringPost from '@/content/posts/measuring-developer-productivity.mdx'
 import HiringPost from '@/content/posts/hiring-for-editorial-judgment.mdx'
@@ -13,6 +14,14 @@ export type Post = {
 }
 
 export const posts: Post[] = [
+  {
+    slug: 'coaching-the-coach',
+    title: 'Coaching the Coach',
+    dek: 'Your report just started managing people. Your job changed too. Nobody sent a memo.',
+    date: '2026-06-01',
+    dateLabel: 'June 2026',
+    Component: CoachingPost as Post['Component'],
+  },
   {
     slug: 'reading-is-the-new-coding',
     title: 'Reading Is the New Coding',
