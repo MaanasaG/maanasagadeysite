@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
   <title id="title">The org chart is your first multi-agent system</title>
-  <desc id="desc">Side-by-side comparison of a multi-agent system and a mission-team org  same design, two graphs.</desc>
+  <desc id="desc">Side-by-side comparison of a multi-agent system and a mission-team org â€” same design, two graphs.</desc>
   <rect width="720" height="480" fill="#F2F4EF"/>
 
   <text x="360" y="28" text-anchor="middle" font-family="Georgia, ui-serif, serif" font-size="16" fill="#1E2D1C">The org chart is your first multi-agent system</text>
@@ -79,8 +79,8 @@
   <!-- Footer -->
   <line x1="80" y1="280" x2="640" y2="280" stroke="#6E8A6E" stroke-width="0.75" opacity="0.5"/>
   <text x="360" y="312" text-anchor="middle" font-family="Georgia, ui-serif, serif" font-size="18" fill="#3F5A3F">Stop assigning rows. Start designing conditions.</text>
-  <text x="360" y="340" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#4A5A48">Mission before structure · Bounded context · Compose dynamically · Orchestrate, then coach</text>
-  <text x="360" y="372" text-anchor="middle" font-family="Georgia, ui-serif, serif" font-style="italic" font-size="12" fill="#1E2D1C">The org chart is your first multi-agent system  same design, two graphs.</text>
+  <text x="360" y="340" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#4A5A48">Mission before structure ï¿½ Bounded context ï¿½ Compose dynamically ï¿½ Orchestrate, then coach</text>
+  <text x="360" y="372" text-anchor="middle" font-family="Georgia, ui-serif, serif" font-style="italic" font-size="12" fill="#1E2D1C">The org chart is your first multi-agent system â€” same design, two graphs.</text>
 
   <!-- Sprout -->
   <g transform="translate(360, 410)">
