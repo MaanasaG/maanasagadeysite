@@ -1,0 +1,80 @@
+<figure className="essay-figure">
+  <img
+    src="/posts/mission-teams-diagram.svg"
+    alt="Side-by-side: a multi-agent system under an Orchestrator, and a mission-team org under Manager + PM — labeled same design."
+  />
+  <figcaption>The org chart is your first multi-agent system — same design, two graphs.</figcaption>
+</figure>
+
+### The problem
+
+## Your org chart is a monolith. You&rsquo;d never ship software like this.
+
+Nobody builds one giant do-everything agent. You build small, bounded ones — one per task, one per doc — designed around the outcome.
+
+Now look at your org. Permanent frontend team, permanent backend team, permanent QA. Fixed rows, planted in the same spot every season, whether or not that&rsquo;s where the work is.
+
+We spent two years learning to decompose problems into correctly sized agents. Then we went back to running humans like a monolith and called it stability.
+
+### The trap
+
+## The people building agent systems already stopped doing this. To themselves.
+
+The engineers most fluent in mapping agents to bounded tasks sit inside the most rigid human structures. They&rsquo;ll spin up five agents before lunch, then wait a quarter for a reorg to move one person to where the work is.
+
+&ldquo;We need a frontend team and a backend team&rdquo; felt like structure. It was a default. A garden planted in permanent rows looks organized right up until the light shifts and half of it is growing in shade.
+
+Not a new idea, to be fair — Red Hat runs tiger teams across more than 500 engineers, Spotify had squads. What nobody says out loud: the org chart is an agent graph. Same design problem. We just keep treating org design and agent orchestration as two conversations. They&rsquo;re one.
+
+### The framework
+
+## Four pillars: build the team like you&rsquo;d build the system
+
+Call them mission teams, tiger teams, context teams — the name matters less than the four rules underneath. One team, one mission.
+
+<ol className="metric-list">
+  <li>
+    <strong>Mission before structure.</strong> Define the outcome first. Ask what capabilities the goal needs — don&rsquo;t inherit &ldquo;frontend and backend&rdquo; before you&rsquo;ve asked. Plant for the harvest you want, not the rows you had.
+  </li>
+  <li>
+    <strong>Bounded context per team.</strong> An agent owns one job. A mission team owns one mission, end to end. No committee, no &ldquo;wait, who owns this?&rdquo;
+  </li>
+  <li>
+    <strong>Dynamic composition.</strong> Agents spin up and tear down as the work changes. Teams should too. This is the pillar that makes people flinch, because it threatens permanent reporting lines. You don&rsquo;t leave last season&rsquo;s plants in the ground because you&rsquo;re attached to them.
+  </li>
+  <li>
+    <strong>Manager as orchestrator and coach.</strong> The one people get wrong. The manager stops owning the task box — not the person. Career growth, wellbeing, coaching judgment: all stays. What changes is you route people to missions by strength instead of assigning tasks.
+  </li>
+</ol>
+
+### The pushback
+
+## Three objections I get every time
+
+<strong>&ldquo;Can&rsquo;t an agent just replace the manager?&rdquo;</strong> Routing and tracking — yes, automate it. Reading burnout before anyone says the word, knowing when to push and when to stand in front of someone, accountability in a hard week — no. Route with a machine. Trust stays human.
+
+<strong>&ldquo;If teams are fluid, what happens to PMs?&rdquo;</strong> Separate product ownership from execution team membership. The PM stays constant — roadmap, customer context. What flexes is who executes. The PM is the stable orchestrator; the bench underneath flexes.
+
+<strong>&ldquo;And QA?&rdquo;</strong> Different plant, different care. QA is fluid and standardized: rotating people who embed in whatever mission needs them, plus a thin, stable QA chapter that owns the shared playbook so standards don&rsquo;t fragment. PM anchors. QA embeds but keeps one root system.
+
+### How you actually do this
+
+## The real blocker isn&rsquo;t structure. It&rsquo;s visibility.
+
+Every objection reduces to one fear: I won&rsquo;t see what my people are doing. Fix that and the resistance composts itself.
+
+Build the human version of an orchestrator agent — a dashboard that reads where work already lives, instead of asking anyone to update a tracker they never will: commits from GitHub, tickets from Jira, docs from Confluence. It infers rather than interrogates: this person&rsquo;s commits map to the checkout mission, tickets 70% done, doc touched two days ago.
+
+The reframe that lands: you&rsquo;re not blowing up reporting lines. The line stays — it just stops being a task boundary and becomes a channel for context and trust.
+
+### One last thing
+
+## The org chart is your first multi-agent system. Design it like one.
+
+We already know how to do this. We do it to our agents every day: bounded units, spun up for the mission, orchestrated by something that routes to strengths. We just haven&rsquo;t pointed the skill at the humans.
+
+You don&rsquo;t grow a garden by pulling on the plants. You fix the soil, manage the light, rotate with the seasons. Mission teams are the same move: stop assigning rows, start designing conditions.
+
+Mission before structure. Bounded context. Compose dynamically. Orchestrate, then coach.
+
+The agents already work this way. Your best people are ready to. The org chart is the last monolith — go refactor it.

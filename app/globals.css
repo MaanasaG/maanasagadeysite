@@ -248,6 +248,24 @@ a:hover {
 .essay em { font-style: italic; }
 .essay strong { font-weight: 600; }
 
+.essay .essay-figure {
+  margin: 0 0 2rem;
+}
+.essay .essay-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(110, 138, 110, 0.35);
+  background: var(--page);
+}
+.essay .essay-figure figcaption {
+  margin-top: 0.65rem;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
 /* Numbered metric list (essay-specific) */
 .essay .metric-list { counter-reset: metric; padding-left: 0; list-style: none; }
 .essay .metric-list > li {
