@@ -14,12 +14,13 @@ export function About() {
 
       <h3 className="sub-h3">What I&rsquo;m proudest of.</h3>
       <p className="max-w-[36rem] leading-[1.75]">
-        Zero regressions on one of Workday&rsquo;s biggest releases. An ML
+        Zero regressions on one of Workday&rsquo;s biggest releases. Org Chart
+        and Enterprise Frameworks shipped with a real quality lift. An ML
         team built from nothing that shipped in year one. The first agentic
-        RAG system at Workday — built in 2023, before anyone had a playbook
-        for it, because no org chart approved it but everyone needed it.
-        A month in Dublin. A summit that turned scattered agendas across the
-        org into one shared direction.{' '}
+        RAG system at Workday — started before anyone had a playbook for it,
+        because no org chart approved it but everyone needed it. A month in
+        Dublin. A summit that turned scattered agendas across the org into
+        one shared direction.{' '}
         <em className="not-italic text-muted">
           The through-line on all of it: get the conditions right and people
           surprise you.
