@@ -9,25 +9,25 @@ type Role = {
 
 const roles: Role[] = [
   {
-    dates: '2026 — Now',
+    dates: 'May 2026 — Now',
     title: 'Sr. Software Development Engineering Manager',
     org: 'Workday',
     note: 'Still figuring out what the "Sr." means. Mostly it means the problems got bigger.',
   },
   {
-    dates: '2024 — 2026',
+    dates: 'Jun 2024 — Apr 2026',
     title: 'Software Development Engineering Manager — Student ML & Financial Aid',
     org: 'Workday',
     note: 'Built the ML team from scratch while also owning the systems that determine whether students get their financial aid on time. The stakes keep you very, very honest.',
   },
   {
-    dates: '2022 — 2024',
+    dates: 'Jul 2022 — Jun 2024',
     title: 'Software Development Engineering Manager — Enterprise Frameworks',
     org: 'Workday',
     note: "Led the Org Chart team. Turns out building the product that visualises everyone else's reporting structure makes you think very carefully about your own.",
   },
   {
-    dates: '2021 — 2022',
+    dates: 'Jul 2021 — Apr 2022',
     title: 'Associate Software Development Engineering Manager',
     org: 'Workday',
     note: "First management role. Learned very quickly that managing engineers is nothing like being one. Also learned that's the fun part.",
@@ -75,7 +75,7 @@ export function Experience() {
         {roles.map((r) => (
           <li
             key={`${r.title}-${r.dates}`}
-            className="grid grid-cols-1 sm:grid-cols-[8rem_1fr] gap-x-8 gap-y-1"
+            className="grid grid-cols-1 sm:grid-cols-[10.5rem_1fr] gap-x-8 gap-y-1"
           >
             <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted pt-[0.3rem]">
               {r.dates}

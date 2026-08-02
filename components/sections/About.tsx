@@ -5,7 +5,7 @@ export function About() {
     <section id="about" className="py-24 sm:py-32">
       <SectionLabel>About-ish</SectionLabel>
 
-      <h2 className="section-h2">Eleven years, one company, a few plot twists.</h2>
+      <h2 className="section-h2">Twelve years, one company, a few plot twists.</h2>
 
       <p className="lead mt-7 max-w-[36rem]">
         I started at Workday in 2014 and grew into the management roles I have
@@ -30,9 +30,9 @@ export function About() {
       <p className="max-w-[36rem] leading-[1.75]">
         Automation engineer first — writing test infrastructure before I fully
         understood what I was testing. Then into software development, owning
-        features and technical design. Then management: Enterprise Frameworks,
-        then Workday Student, then the ML team I built from scratch inside it.
-        Each step made sense only in hindsight.
+        features and technical design. Then management: associate manager,
+        Enterprise Frameworks and Org Chart, then Workday Student — where I
+        built the ML team from scratch. Each step made sense only in hindsight.
       </p>
 
       <h3 className="sub-h3">When I&rsquo;m not at my laptop.</h3>

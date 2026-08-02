@@ -11,7 +11,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: 'Building the Student ML team',
-    tag: 'Workday · 2022 — Now',
+    tag: 'Workday · 2024 — 2026',
     stat: '3',
     statLabel: 'ML features in year one',
     body:
@@ -19,7 +19,7 @@ const projects: Project[] = [
   },
   {
     title: 'Org Chart & Enterprise Frameworks',
-    tag: 'Workday · 2018 — 2021',
+    tag: 'Workday · 2022 — 2024',
     stat: '20%+',
     statLabel: 'lift in product quality',
     body:
