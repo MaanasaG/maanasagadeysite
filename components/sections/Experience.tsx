@@ -12,7 +12,7 @@ const roles: Role[] = [
     dates: '2026 — Now',
     title: 'Sr. Software Development Engineering Manager',
     org: 'Workday',
-    note: 'Still figuring out what the "Sr." means. Mostly it means the problems got bigger.',
+    note: 'Own AI/ML for Student end to end — and we just shipped the pillar’s first production LLM agent. Still figuring out what the "Sr." means. Mostly it means the problems got bigger.',
   },
   {
     dates: '2024 — 2026',

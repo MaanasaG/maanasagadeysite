@@ -10,6 +10,14 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'First production LLM agent for Student',
+    tag: 'Workday · 2026',
+    stat: '1st',
+    statLabel: 'agent shipped in the pillar',
+    body:
+      'Shipped the Student pillar&rsquo;s first production LLM agent in a compliance-heavy domain — the same release line that decides whether students get financial aid on time. The point wasn&rsquo;t the demo; it was proving the patterns for deploying agentic AI safely: evals, guardrails, and release gates that let the org ship agents without treating every launch like a moonshot.',
+  },
+  {
     title: 'Building the Student ML team',
     tag: 'Workday · 2024 — 2026',
     stat: '3',
@@ -56,7 +64,7 @@ export function Projects() {
     <section id="work" className="py-24 sm:py-32">
       <SectionLabel>The greatest hits</SectionLabel>
 
-      <h2 className="section-h2">Five things worth talking about.</h2>
+      <h2 className="section-h2">Six things worth talking about.</h2>
 
       <ol className="mt-14 space-y-16">
         {projects.map((p) => (

@@ -18,12 +18,34 @@ export function About() {
         and Enterprise Frameworks shipped with a real quality lift. An ML
         team built from nothing that shipped in year one. The first agentic
         RAG system at Workday — started before anyone had a playbook for it,
-        because no org chart approved it but everyone needed it. A month in
-        Dublin. A summit that turned scattered agendas across the org into
+        because no org chart approved it but everyone needed it. The
+        Student pillar&rsquo;s first production LLM agent, shipped in a
+        compliance-heavy domain where regressions are not an option. A month
+        in Dublin. A summit that turned scattered agendas across the org into
         one shared direction.{' '}
         <em className="not-italic text-muted">
           The through-line on all of it: get the conditions right and people
           surprise you.
+        </em>
+      </p>
+
+      <h3 className="sub-h3">What I&rsquo;m building.</h3>
+      <p className="max-w-[36rem] leading-[1.75]">
+        <a
+          href="https://pomvox.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 text-ink"
+        >
+          Pomvox
+        </a>
+        {' '}
+        — free, open-source on-device voice dictation for macOS. Co-building
+        a fully local pipeline: speech-to-text plus a local LLM for cleanup,
+        running on the Apple Neural Engine. Audio never leaves the machine.
+        Notarized Swift release.{' '}
+        <em className="not-italic text-muted">
+          The constraint is the product.
         </em>
       </p>
 
