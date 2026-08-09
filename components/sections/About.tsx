@@ -43,10 +43,7 @@ export function About() {
         — free, open-source on-device voice dictation for macOS. Co-building
         a fully local pipeline: speech-to-text plus a local LLM for cleanup,
         running on the Apple Neural Engine. Audio never leaves the machine.
-        Notarized Swift release.{' '}
-        <em className="not-italic text-muted">
-          The constraint is the product.
-        </em>
+        Notarized Swift release.
       </p>
 
       <h3 className="sub-h3">The arc.</h3>
