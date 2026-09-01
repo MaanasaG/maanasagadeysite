@@ -1,4 +1,5 @@
 // New post? Add MDX in content/posts/, then register here (newest first).
+import VerificationTaxPost from '@/content/posts/verification-tax.mdx'
 import SpanPost from '@/content/posts/span-of-judgment.mdx'
 import MissionTeamsPost from '@/content/posts/mission-teams.mdx'
 import CoachingPost from '@/content/posts/coaching-the-coach.mdx'
@@ -16,6 +17,14 @@ export type Post = {
 }
 
 export const posts: Post[] = [
+  {
+    slug: 'verification-tax',
+    title: 'The Verification Tax',
+    dek: 'Producing got cheap. So we did more of it. And the checking that used to be a rounding error quietly became the job.',
+    date: '2026-08-31',
+    dateLabel: 'August 2026',
+    Component: VerificationTaxPost as Post['Component'],
+  },
   {
     slug: 'span-of-judgment',
     title: 'Span of Control Is Dead',

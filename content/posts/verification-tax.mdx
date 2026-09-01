@@ -1,0 +1,85 @@
+### The paradox
+
+## Your team shipped twice as much this quarter. So why is everyone more tired?
+
+Output is up. Energy is down. That is not a morale problem or a rough sprint. It is a bill, and nobody put it on the invoice.
+
+### The bill nobody itemized
+
+## When a machine produces, a human verifies. And verifying is not free.
+
+In a 2025 randomized trial, METR watched sixteen experienced developers work real issues in their own mature repositories. With AI, they were 19 percent slower. Not faster. Slower. Roughly 9 percent of their time went to reviewing and cleaning up after the AI. Fewer than 44 percent of its suggestions were accepted at all, and the survivors were usually rewritten anyway. Someone read the rest, judged it, and binned it. That reading is the bill.
+
+Stack Overflow&rsquo;s 2025 survey found the biggest developer frustration is code that is almost right, but not quite. Two thirds named it. Obvious garbage is easy, you reject it and move on. Almost right is the expensive kind, because someone qualified has to read it closely enough to catch the one line that pages them at 3am.
+
+DORA surveyed nearly five thousand professionals: AI pushes delivery throughput up and stability down at the same time. Ninety percent use it, over eighty percent feel more productive, thirty percent barely trust it. The average team is shipping more, trusting it less, and paying the difference by hand.
+
+### The definition
+
+## The Verification Tax is the cost of trusting, checking, and reworking whatever the agent hands you.
+
+Not a bug. A transfer. Producing got cheap, so we did more of it, and the checking that used to be a rounding error became the actual job.
+
+You did not get a tireless robot engineer. You got a very fast, very confident junior who never reads the room, never asks a question, and hands you twelve pull requests before lunch. Congratulations. You are their editor now.
+
+### Why you cannot feel it
+
+## Not wrong about the size. Wrong about the sign.
+
+Here is the part that should unsettle you. In METR&rsquo;s trial, the developers predicted AI would make them 24 percent faster. They were measured 19 percent slower. And afterward, having lived it, they still swore they had been 20 percent faster.
+
+If your case for AI productivity is that the team says it feels faster, you do not have a measurement. You have a mood.
+
+### Where the tax comes from
+
+## METR names five factors. Three carry the weight.
+
+**Missing context:** the tacit knowledge every codebase runs on, the &ldquo;we tried that in 2022 and it took down payments&rdquo; that lives in three people&rsquo;s heads. The agent was not stupid. It just started on Monday and nobody gave it the onboarding doc.
+
+**Almost right output:** plausible but wrong is far costlier to catch than obviously broken, because it sails past a tired reader on a Friday.
+
+**Uncalibrated trust:** everyone is improvising a private answer to how hard should I check this? Multiply that across a team and you get the tax, distributed as luck.
+
+### The lever
+
+## The Vault: stop paying for the same context twice.
+
+Most of the tax is missing context, and missing context is fixable. Every time a human verifies something and signs off, they learned something the agent did not know, and right now that lesson evaporates by Thursday. The next agent starts as clueless as the last. So you pay twice. Then a third time.
+
+Send it somewhere instead. I am using Karpathy&rsquo;s LLM wiki pattern as a Vault for my scrum teams: knowledge compiled once and kept current, not worked out from scratch on every query. The conventions, the decisions and the reasoning behind them, the landmines. It grows exactly where you already paid the tax once, so you stop paying it for the same thing twice.
+
+Here is the reframe nobody says out loud. If agents need context this badly, scrum teams need it even more. We built the whole Vault to brief a machine, and it turns out the humans were starved for the same thing all along. The new hire. The person who joined the sprint yesterday. The teammate covering an area they have never touched. Feed the agent, and you accidentally feed the team.
+
+The bonus is cheaper cycles and tokens. An unbriefed agent reinvents your architecture on every prompt and hands you a confident, wrong draft that costs a full review round. A briefed one skips all of it. Fewer cycles, fewer tokens spent rediscovering what you already knew, fewer trips around the send it back loop. The tax drops in compute and salary at once. As DORA put it, AI amplifies whatever is already there. Give it a Vault and it compounds. Give it nothing and it reinvents the wheel every morning and invoices you for it.
+
+### The scoreboard
+
+## Three numbers you can track Monday. No budget, no permission.
+
+<ol className="metric-list">
+  <li>
+    <strong>Rework rate.</strong> Review round trips per accepted piece of work, your core tax meter. Count &ldquo;changes requested&rdquo; events per merged PR, data you already have and have never once looked at.
+  </li>
+  <li>
+    <strong>Discard rate.</strong> The share of agent output you binned instead of reworking. High discard means the agents are aimed wrong, the cheapest problem here to fix. One question at retro: what did we generate and quietly bin?
+  </li>
+  <li>
+    <strong>Context miss rate.</strong> The share of rework you can trace to missing context, the Vault&rsquo;s report card, because every miss is a line you forgot to write down. Label a PR when you bounce it back for a context reason and count the labeled ones. Two seconds, no Jira epic required.
+  </li>
+</ol>
+
+Pick two before the week is out. Not one needs anyone&rsquo;s approval.
+
+### One last thing
+
+## The unit of work is no longer what you make. It is what you will put your name on.
+
+For a decade we measured production, lines, commits, velocity, story points. Production is now cheap and close to infinite. Counting an agent&rsquo;s output is like rating a chef by how fast the microwave runs. The bottleneck moved to judgment, and we are all still pointing the ruler at the wrong thing.
+
+That is the throughline of everything I have been writing, and over the next few posts I will take it apart one piece at a time. Next up: why the people doing the work are the last to know.
+
+Producing is cheap. Verifying is the job. So price it.
+
+---
+
+Sources: METR, 2025. Stack Overflow Developer Survey, 2025. DORA, 2025. Andrej Karpathy, LLM wiki.
