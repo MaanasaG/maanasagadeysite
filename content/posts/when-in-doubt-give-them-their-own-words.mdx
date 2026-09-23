@@ -1,0 +1,77 @@
+Say this out loud: &ldquo;Let&rsquo;s move the review to Tuesday. No wait, Thursday.&rdquo;
+
+Any human hears Thursday. Our model heard a scheduling conflict.
+
+Speech is full of these little repairs. We make them constantly and handle them so easily we don&rsquo;t notice. Models notice. Getting them right is harder than it looks.
+
+## The billboard the model drove past
+
+This summer we fine tuned a small cleanup model for <a href="https://pomvox.ai" target="_blank" rel="noopener noreferrer">Pomvox</a>, the open source dictation app I work on. Its whole job is to take the messy text that comes out of speech recognition and turn it into what you meant to write: punctuation, capitals, no &ldquo;um&rdquo; or &ldquo;like&rdquo;, and those spoken repairs resolved. It runs on your Mac, and your words never leave it.
+
+We knew self corrections would be the hard part, so we planned for them. A quarter of the training data was sentences like the one above.
+
+The model still missed them.
+
+A quarter of the training data. That&rsquo;s not a hint. That&rsquo;s a billboard. The model drove right past it.
+
+It wasn&rsquo;t every time, and it wasn&rsquo;t dramatic. But it happened often enough that we couldn&rsquo;t pretend the data had solved it. We did the work, and the model surprised us anyway.
+
+## Plan the bad day first
+
+At that point you can go two ways.
+
+The first is more data, better data, one more training run. That&rsquo;s worth doing, and we&rsquo;re doing it. But more data is the &ldquo;let me just add one more slide&rdquo; of machine learning. Sometimes it helps. It never finishes.
+
+It also rests on an assumption I&rsquo;ve learned to distrust after twelve years of shipping software: that with enough effort, the failure goes away. It doesn&rsquo;t. It gets rarer. And rare is a statistic. For the person it happens to, it&rsquo;s one hundred percent.
+
+The second way is to ask a different question. Not &ldquo;how do we stop the model from being wrong?&rdquo; but &ldquo;what does the person see when it is?&rdquo;
+
+That question shaped the cleanup engine more than any training run did.
+
+If cleanup fails, you get your own words back. Exactly what you said, untouched. It&rsquo;s a bit messier, maybe with a stray &ldquo;um&rdquo;, but it&rsquo;s yours and it&rsquo;s accurate. The smart feature&rsquo;s worst case becomes the plain feature&rsquo;s normal case.
+
+If cleanup is slow, it stops. Every request has a deadline. When it passes, the engine gives up cleanly, and a late answer is thrown away instead of pasted over whatever you&rsquo;ve moved on to. A late correct answer is autocorrect fixing your text after you hit send.
+
+Every result shows what changed. The engine returns more than the final text. It returns the edits it made, the outcome, which model and version made them, and how long each step took. If the only way to debug is squinting at the output, you don&rsquo;t have a log. You have a mystery novel.
+
+None of this makes the model smarter. All of it makes the model&rsquo;s mistakes cheap.
+
+## Make mistakes cheap
+
+For most of my career, reliability meant prevention: tests, reviews, regression suites, the long march to zero. I&rsquo;d do all of it again. But with a model in the loop, prevention has a ceiling. You can&rsquo;t write a test for every way someone says &ldquo;no wait.&rdquo;
+
+So the job changes. You stop working only on how often a mistake happens and start working on what each one costs. A wrong answer that&rsquo;s easy to spot, cheap to undo, and falls back to something true is one product. A wrong answer that looks confident and goes straight into an email to your boss is another. That one isn&rsquo;t a bug. It&rsquo;s a career event.
+
+I&rsquo;ve written about the <a href="/posts/verification-tax/">Verification Tax</a>, the human effort it takes to check what AI produces. This is its quieter sibling. Good design doesn&rsquo;t only make checking faster. It makes some checks unnecessary, because the worst outcome is already fine.
+
+## Same question, bigger building
+
+I&rsquo;ve seen this pattern outside Pomvox. When we put our first LLM agent into production for financial aid, where a wrong answer lands on a real student, the conversations that mattered most weren&rsquo;t about accuracy on a good day. They were about the bad one. Who sees it? What does the system do instead? How fast can a person step in?
+
+A weekend dictation app and an enterprise agent look nothing alike. The question that makes them safe to ship is the same.
+
+## Before you celebrate the eval score
+
+Ask three questions:
+
+<ol className="metric-list">
+  <li>
+    <strong>When this is wrong, what does the user see?</strong> If the answer is &ldquo;something that looks right,&rdquo; start there.
+  </li>
+  <li>
+    <strong>What is the honest fallback?</strong> There&rsquo;s almost always a simpler, duller, true answer. Make it the default for failure.
+  </li>
+  <li>
+    <strong>Can anyone tell what the model did?</strong> If not, every mistake becomes an investigation.
+  </li>
+</ol>
+
+In the garden, you don&rsquo;t plant as if frost won&rsquo;t come. You plant so the frost doesn&rsquo;t take everything. The good seasons take care of themselves. The design work is for the cold nights.
+
+Fall back to their words. Stop when you&rsquo;re late. Show your edits.
+
+And remember: Tuesday was never the plan.
+
+---
+
+<a href="https://pomvox.ai" target="_blank" rel="noopener noreferrer">Pomvox</a> is free and open source. The cleanup engine and the fine tuning notes behind this piece are on <a href="https://github.com/pomvox/pomvox" target="_blank" rel="noopener noreferrer">GitHub</a> and the Pomvox blog.

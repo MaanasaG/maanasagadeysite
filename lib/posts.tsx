@@ -1,4 +1,5 @@
 // New post? Add MDX in content/posts/, then register here (newest first).
+import OwnWordsPost from '@/content/posts/when-in-doubt-give-them-their-own-words.mdx'
 import VerificationTaxPost from '@/content/posts/verification-tax.mdx'
 import SpanPost from '@/content/posts/span-of-judgment.mdx'
 import MissionTeamsPost from '@/content/posts/mission-teams.mdx'
@@ -17,6 +18,14 @@ export type Post = {
 }
 
 export const posts: Post[] = [
+  {
+    slug: 'when-in-doubt-give-them-their-own-words',
+    title: 'When in Doubt, Give Them Their Own Words',
+    dek: 'What a small dictation app taught me about the moment the model is wrong.',
+    date: '2026-09-23',
+    dateLabel: 'September 2026',
+    Component: OwnWordsPost as Post['Component'],
+  },
   {
     slug: 'verification-tax',
     title: 'The Verification Tax',
